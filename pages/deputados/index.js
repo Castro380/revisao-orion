@@ -15,7 +15,7 @@ const index = ({deputados}) => {
                 {deputados.map(item => (
                     <Col className='mb-3' md={2} title={item.foto}>
                         <Link href={'/deputados/' + item.id}>
-                            <img key={item.id} src={item.urlFoto} width="100px" />
+                            <img key={item.id} src={item.urlFoto} width="200px" />
                         </Link>
                     </Col>
                 ))}

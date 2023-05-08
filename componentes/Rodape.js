@@ -11,7 +11,7 @@ const style = {
 
 const Rodape = () => {
   return (
-    <div  style={{width: '100%'}} className="bg-secondary text-white text-center position-fixed bottom-0">
+    <div  style={{width: '100%', height: "100%"}} className="bg-secondary text-white mb-0 text-center bottom-0">
       <p style={style}>Rodape</p>
     </div>
 

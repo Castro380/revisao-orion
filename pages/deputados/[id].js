@@ -2,21 +2,30 @@
 import { Card, Col, Row, Table } from 'react-bootstrap'
 import Pagina from '@/componentes/Pagina'
 import apiDeputados from '@/services/apiDeputados'
+import Link from 'next/link'
 
 
 const Detalhes = ({ deputado, deputado_despesas, deputado_profissoes }) => {
   return (
     <Pagina titulo={deputado.nomeCivil}>
         <Row md={3}>
-       <Card>
+
+          <Col>
+                 <Card>
               <Card.Img src={deputado.ultimoStatus.urlFoto} />
               <Card.Body>
                 <Card.Title>{deputado.ultimoStatus.nomeCivil}</Card.Title>
                   <p>Partido: {deputado.ultimoStatus.siglaPartido}</p>
                   <p>UF: {deputado.ultimoStatus.siglaUf}</p> 
               </Card.Body>
+
+             
             </Card>
-        
+            <Col>
+                  <Link className='btn btn-danger mt-3' href={'/deputados/'}>Voltar</Link>
+            </Col>
+          </Col>
+
 
     <Col>
       <Table striped>
